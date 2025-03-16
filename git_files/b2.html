@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="www.virtulab.ch/git_files/default.min.css">
+    <link rel="stylesheet" href="www.virtulab.ch/git_files/style.css" type="text/css">
+    <script type="text/javascript" src="www.virtulab.ch/git_files/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="www.virtulab.ch/git_files/highlight.min.js"></script>
+    <script type="text/javascript" src="www.virtulab.ch/git_files/jquery.vibrate.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).on('click','a#download',function(){
+                jQuery('div#counter').html('Loading...') ;
+                var ajax = jQuery.ajax({
+                    method : 'get',
+                    url : '/test.php', // Link to this page
+                    data : { 'increase' : '1' }
+                }) ;
+                ajax.done(function(data){
+                    jQuery('div#counter').html(data) ;
+                }) ;
+                ajax.fail(function(data){
+                    alert('ajax fail : url of ajax request is not reachable') ;
+                }) ;
+            }) ;
+        </script>
+
+  </head>
+  <body>
+       <br>
+        <h2 class="ui header">Eligibility Test Page</h2>
+    </div>
+    <div class="page container">
+      <p>Tap the button below. If you experience vibration you are ELIGIBLE to accept the HIT.</p>
+      <br>
+      <p>If tapping the button below does not produce vibration you are NOT ELIGIBLE to accept the HIT.</p>
+  <br>
+  <div id="example-three">
+ <div class="example">
+  <div class="ui tiny button fluid orange"><strong>Begin vibration </strong></div>
+  <script>// <
+   $("#example-three .button").vibrate(2500);
+   ></script>  
+              </script>
+            </div>
+          </div>
+           <div id="counter"><?php echo $counter ; ?></div>
+    <a href="" id="download" onclick="return false;">Download btn</a>
+
+        </div>
+
+  
+  
+</body></html>
