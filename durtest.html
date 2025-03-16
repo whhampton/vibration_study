@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://illyism.github.io/jquery.vibrate.js/ -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./git_files/default.min.css">
+    <link rel="stylesheet" href="./git_files/style.css" type="text/css">
+    <script type="text/javascript" src="./git_files/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./git_files/highlight.min.js"></script>
+    <script type="text/javascript" src="./git_files/jquery.vibrate.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="page container">
+      <h2 class="ui header"> Mobile Vibration Test Page</h2>
+      <p>Tap the buttons below to experience the different vibration durations.</p>
+
+      <p></p>
+      <div class="ui grid two column stackable">
+     
+     
+            <div class="ui buttons fluid example-long two">
+            <a class="ui small tiny grey button vibrate">25</a>
+            <a class="ui small tiny grey button vibrate">50</a>
+            <a class="ui small tiny grey button vibrate">100</a>
+            <a class="ui small tiny grey button vibrate">200</a>
+            <a class="ui small tiny grey button vibrate">400</a>
+            <a class="ui small tiny grey button vibrate">800</a>
+            <a class="ui small tiny grey button vibrate">1600</a>
+            <a class="ui small tiny grey button vibrate">3200</a>
+            
+              <script>
+                $(".example-long .button").each(function() {
+                 $(this).vibrate(parseInt($(this).text(), 10));
+                });
+    
+              </script>
+            </div>
+             
+          </div>
+        </div>
+
+     
+  
+  
+</body></html>
